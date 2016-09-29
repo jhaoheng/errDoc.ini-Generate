@@ -39,4 +39,4 @@ for (( i = 0; i < $maxLine; i++ )); do
 done
 
 echo "============"
-echo "Export file name is : "$output
+echo "Export file is : "$output
