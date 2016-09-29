@@ -1,5 +1,7 @@
 #!/bin/bash
 
+IFS=$'\r\n' GLOBIGNORE='*' command eval  'line=($(cat ./word.ini))'
+
 maxLine=$(cat word.ini | wc -l);
 # echo $maxLine;
 # echo "${line[0]}"
