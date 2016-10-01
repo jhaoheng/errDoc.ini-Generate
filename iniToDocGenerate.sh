@@ -45,8 +45,7 @@ echo "============"
 
 IFS=$'\r\n' GLOBIGNORE='*' command eval  'line=($(cat $input))'
 
-exportFile="errCode_doc.md"
-rm errCode_doc.md
+rm $output
 
 maxLine=$(cat $input | wc -l);
 # echo $maxLine;
