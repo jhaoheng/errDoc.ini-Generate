@@ -17,15 +17,16 @@ echo "\033[1;32m"
 echo "Please input [.ini] file, ex: word.ini"
 echo "\033[0m"
 
-read -p "file (default is $default_file) : " _input
+default_file=$(cat config.json | jq -r '.input.defaultFile')
+inputPath=$(pwd)"/"$(cat config.json | jq -r '.input.path')
+echo "default : "$inputPath$default_file
+
+read -p "file : " _input
 
 # input
-
 if [ "$_input" ==  '' ]; then
-	_input=$(cat config.json | jq -r '.input.defaultFile')
+	_input=$default_file
 fi
-
-inputPath=$(pwd)"/"$(cat config.json | jq -r '.input.path')
 inputName="${_input%%.*}"
 inputExt=".${_input##*.}"
 input=$inputPath$inputName$inputExt
