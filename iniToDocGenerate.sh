@@ -70,4 +70,3 @@ for (( i = 0; i < $maxLine; i++ )); do
 done
 
 echo "============"
-echo "Export file is : "$output
