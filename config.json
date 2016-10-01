@@ -1,0 +1,13 @@
+{
+	"input":{
+		"Default_info":"Path=./ ;",
+		"path":"",
+		"defaultFile":"word.ini"
+	},
+	"output":{
+		"Default_info":"Path=./ ; name=input.name ; ext=.md",
+		"path":"",
+		"name":"errCode_doc",
+		"ext":".md"
+	}
+}
